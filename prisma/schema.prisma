@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(USER)
+  points    Point[]
+  createdAt DateTime @default(now())
+}
+
+model Point {
+  id        String    @id @default(uuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  type      PointType // entrada | saida
+  timestamp DateTime  @default(now())
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum PointType {
+  ENTRADA
+  SAIDA
+}

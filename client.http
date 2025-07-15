@@ -1,0 +1,52 @@
+@base_url = http://localhost:4000
+
+
+###
+POST {{base_url}}/auth
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "joh2n@email.com",
+  "password": "123456"   
+  
+  }
+
+###
+POST {{base_url}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "joh2n@email.com",
+  "password": "123456"   
+  
+  }
+
+###
+GET {{base_url}}/points/f87cba94-4531-45b6-a1e0-9c9cdb8b8190
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWNhZGJlYS03M2U5LTQxZTctYWMwNy01NDNkZmE5OGVhMTciLCJpYXQiOjE3NTI2MTQ4MDcsImV4cCI6MTc1MjYxODQwN30.1rlAtxbe4a7EOXJUHNCVyrnvGi3S0wiVkMZgcYkqZUo
+###
+GET {{base_url}}/points
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWNhZGJlYS03M2U5LTQxZTctYWMwNy01NDNkZmE5OGVhMTciLCJpYXQiOjE3NTI2MTExNjcsImV4cCI6MTc1MjYxNDc2N30.ueHilUAQnrvq0eiVw1910px-J3lgwKHY3piWK1ertvw
+###
+DELETE {{base_url}}/points/f662435e-edab-4144-acfd-ab3319a23d9f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWNhZGJlYS03M2U5LTQxZTctYWMwNy01NDNkZmE5OGVhMTciLCJpYXQiOjE3NTI2MTExNjcsImV4cCI6MTc1MjYxNDc2N30.ueHilUAQnrvq0eiVw1910px-J3lgwKHY3piWK1ertvw
+###
+
+POST {{base_url}}/points
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWNhZGJlYS03M2U5LTQxZTctYWMwNy01NDNkZmE5OGVhMTciLCJpYXQiOjE3NTI2MTExNjcsImV4cCI6MTc1MjYxNDc2N30.ueHilUAQnrvq0eiVw1910px-J3lgwKHY3piWK1ertvw
+Content-Type: application/json 
+
+{
+  "type": "ENTRADA"
+}
+
+
+###
+PUT {{base_url}}/points/7e018eef-005d-4838-afeb-db1fd58ce4bf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWNhZGJlYS03M2U5LTQxZTctYWMwNy01NDNkZmE5OGVhMTciLCJpYXQiOjE3NTI2MTQ4MDcsImV4cCI6MTc1MjYxODQwN30.1rlAtxbe4a7EOXJUHNCVyrnvGi3S0wiVkMZgcYkqZUo
+Content-Type: application/json 
+
+{
+  "type": "SAIDA"
+}
