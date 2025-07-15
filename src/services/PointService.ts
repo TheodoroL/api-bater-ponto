@@ -1,6 +1,6 @@
 import { PointUpdateRequestDtoType } from "../controller/dto/point-request-dto";
 import { prisma } from "../database/prisma/db"
-import { TokenPayload } from "../util/jwt/jwt";
+
 
 export default {
     async findAllPoints(userId: string) {
