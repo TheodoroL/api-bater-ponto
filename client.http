@@ -17,7 +17,7 @@ POST {{base_url}}/auth/login
 Content-Type: application/json
 
 {
-  "email": "joh2n@email.com",
+  "email": "Admin@gmail.com",
   "password": "123456"   
   
   }
@@ -50,3 +50,10 @@ Content-Type: application/json
 {
   "type": "SAIDA"
 }
+
+###
+GET {{base_url}}/admin/1315db3d-4dbe-4d6b-b62a-916fa9b59bda
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMGRhMTMwNC0wMjgzLTRlNDktODM4NS1mZmFkYTdkOTI0NmIiLCJpYXQiOjE3NTM5MTQ1NTAsImV4cCI6MTc1MzkxODE1MH0.L3JhvQ30ZMgydfNZEpZtDteZVuOlnN7hLVOxTOQ06DE
+###
+PATCH  {{base_url}}/admin/1315db3d-4dbe-4d6b-b62a-916fa9b59bda
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMGRhMTMwNC0wMjgzLTRlNDktODM4NS1mZmFkYTdkOTI0NmIiLCJpYXQiOjE3NTM5MTQ1NTAsImV4cCI6MTc1MzkxODE1MH0.L3JhvQ30ZMgydfNZEpZtDteZVuOlnN7hLVOxTOQ06DE
